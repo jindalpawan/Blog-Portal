@@ -237,7 +237,7 @@ class Profile(BlogHandler):
 
 
 # id
-id=""
+id="client developer facebook id"
 
 class Signup(BlogHandler):
     def get(self):
