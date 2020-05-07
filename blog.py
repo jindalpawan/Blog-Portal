@@ -237,7 +237,7 @@ class Profile(BlogHandler):
 
 
 # id
-id="657925015003816"
+id=""
 
 class Signup(BlogHandler):
     def get(self):
