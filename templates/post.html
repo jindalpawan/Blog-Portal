@@ -1,0 +1,13 @@
+<span >
+  <a href="/{{(p.key().id())}} "
+    class="contact101-form-title"
+   style="text-decoration: none">{{p.subject}}</a>
+</span>
+<span class="label-input101">
+  {{p.created.strftime("%b %d, %Y")}}
+</span>
+<div class="wrap-input100" >
+  <div >
+    {{p._render_text | safe}}
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Post</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/static/newpost/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/static/newpost/css/util.css">
+  <link rel="stylesheet" type="text/css" href="/static/newpost/css/main.css">
+<!--===============================================================================================-->
+
+</head>
+<body>
+  <div class="header">
+    <div class="newp">
+      <a href='/newpost' class="pctive" >New Blog</a>
+    </div>
+        <div class="header-right">
+          <a href='/' >Home</a>
+          {% if user %}
+            <a href="/profile" class="margn-rgt margn-lft">{{user.dname}}</a>
+            <a href="/logout">Logout</a>
+          {% else %}
+            <a href="/login" class="margn-rgt margn-lft">Login</a>
+            <a href="/signup">Signup</a>
+          {% endif %}
+        </div>
+    </div>
+  <div class="limiter">
+    <div class="container-login100" style="background-image: url('/static/newpost/images/bg-02.jpg');">
+    <div class="wrap-contact100">
+      {{post.rr() | safe}}    
+    </div>
+  </div>
+
+</body>
+</html>

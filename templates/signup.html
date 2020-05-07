@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blogging</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/login/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/login/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/static/login/css/main.css">
+<!--===============================================================================================-->
+
+</head>
+<body>
+    
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('/static/login/images/bg-01.jpg');">
+            <div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
+                <form class="login100-form validate-form flex-sb flex-w" method="post">
+                    <span class="login100-form-title p-b-53">
+                        Sign Up With
+                    </span>
+                    
+                    <a href='https://www.facebook.com/v6.0/dialog/oauth?client_id=657925015003816&redirect_uri=http://localhost:8888/dataa&' 
+                    class="btn-face m-t-15 m-b-15 fb-login-button">
+                        <i class="fa fa-facebook-official"></i>
+                        Signup with Facebook
+                    </a>
+                    <div class="p-t-10 p-b-5 wid">
+                        <span class="txt1">
+                            Username
+                        </span>
+                    </div>
+                    <div class="wrap-input100">
+                        <input class="input100" type="text" name="name" value="{{name}}">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="error">
+                            {{error_name}}
+                    </div>
+                    <div class="p-t-10 p-b-5 wid">
+                        <span class="txt1">
+                            Name
+                        </span>
+                    </div>
+                    <div class="wrap-input100 ">
+                        <input class="input100" type="text" name="dname" value="{{dname}}">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div  class="error">
+                        {{error_dname}}
+                    </div>
+
+                    <div class="p-t-10 p-b-5 wid">
+                        <span class="txt1">
+                            Contact
+                        </span>
+                    </div>
+                    <div class="wrap-input100 ">
+                        <input class="input100" type="text" name="contact" value="{{contact}}">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div  class="error">
+                        {{error_contact}}
+                    </div>
+
+                    <div class="p-t-10 p-b-5 wid">
+                        <div class="txt1">
+                            Email
+                        </div>
+                    </div>
+                    <div class="wrap-input100">
+                        <input class="input100" type="text" name="email" value="{{email}}">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div  class="error">
+                        {{error_email}}
+                    </div>
+                    
+                    <div class="p-t-10 p-b-5 wid">
+                        <span class="txt1">
+                            Password
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 ">
+                        <input class="input100" type="password" name="password" value="">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div  class="error">
+                        {{error_password}}
+                    </div>
+
+                    <div class="p-t-13 p-b-5">
+                        <span class="txt1">
+                            Verify Password
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100">
+                        <input class="input100" type="password" name="verify" value="">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="error">
+                        {{error_verify}}
+                        {{error}}
+                    </div>
+
+                    <div class="container-login100-form-btn m-t-17">
+                        <button class="login100-form-btn" type="submit">
+                            Sign Up
+                        </button>
+                    </div>
+
+                    <div class="w-full text-center p-t-55">
+                        <span class="txt2">
+                            Already member?
+                        </span>
+
+                        <a href="/login" class="txt2 bo1">
+                            Login now
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

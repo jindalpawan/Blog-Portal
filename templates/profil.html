@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Profile</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--===============================================================================================-->
+		  <link rel="stylesheet" type="text/css" href="/static/newpost/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+		<!--===============================================================================================-->
+		  <link rel="stylesheet" type="text/css" href="/static/newpost/css/util.css">
+		  <link rel="stylesheet" type="text/css" href="/static/newpost/css/main.css">
+		<!--===============================================================================================-->
+
+	</head>
+
+	<body>
+		<div class="header">
+		     <a href='/newpost' class="pctive" >New Blog</a>
+		    <div class="header-right">
+		      <a href='/' >Home</a>
+		      {% if user %}
+		        <a class="margn-rgt margn-lft" href="/profile">Profile</a>
+		        <a href="/logout">Logout</a>
+		      {% else %}
+		        <a href="/login" class="margn-rgt margn-lft">Login</a>
+		        <a href="/signup">Signup</a>
+		      {% endif %}
+		    </div>
+		</div>
+
+		<div class="limiter">
+			<div class="container-login100" style="background-image: url('/static/newpost/images/bg-01.jpg');">
+			<div class="wrap-contact100">
+				<form action="" class="contact100-form">
+					<h1><b>
+						{{user.dname}}
+					</b></h1>
+					<br>
+					<h4>Genral Details-</h4>
+					<h4>
+						Username: {{user.name}}
+					</h4>					
+					{% if user.contact %}
+						<h4>
+							Contact: {{user.contact}}
+						</h4>
+					{% endif %}
+					{% if user.email %}
+					<h4>
+						Email: {{user.email}}
+					</h4>
+					{% endif %}
+				</form>
+			</div>
+		</div>
+		</div>
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+

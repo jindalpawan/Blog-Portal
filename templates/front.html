@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="limiter">
+<div class="container-login100" style="background-image: url('/static/newpost/images/bg-02.jpg');">
+	<div class="wrap-contact101">	
+		<form action="" >
+			{% for p in posts %}
+			    {{ p.render() | safe }}
+			    <br><br>
+			{% endfor %}
+		</form>
+	</div>
+</div>
+{% endblock %}
