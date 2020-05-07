@@ -237,7 +237,7 @@ class Profile(BlogHandler):
 
 
 # id
-id="client developer facebook id"
+id="developer's facebook id"
 
 class Signup(BlogHandler):
     def get(self):
@@ -285,6 +285,7 @@ class Signup(BlogHandler):
                 have_error = True
 
         if have_error:
+            params['id']=id
             self.render('signup.html', **params)
         else:
             self.done()
@@ -320,8 +321,7 @@ class Login(BlogHandler):
             self.redirect('/')
         else:
             msg = 'Invalid login'
-            print(msg)
-            self.render('login.html',id=id, error = msg,name=name)
+            self.render('login.html',id=id, error = msg)
 
 
 class Logout(BlogHandler):
