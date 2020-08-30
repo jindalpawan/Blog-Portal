@@ -1,0 +1,23 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<title>Myblog</title>
+		<link rel="stylesheet" href="/static/css/cc.css">
+	</head>
+	<body>
+		<h1>New Blog</h1>
+		<form method="post" class="ff">
+			<label>
+				<div>title</div>
+				<input type="text" name="title" value={{title}}>
+			</label>
+			<label>
+				<div>blog</div>
+				<textarea name="bg" value={{bg}}>{{bg}}</textarea>
+			</label>
+			<br>
+			<div class="error">{{error}}</div>
+			<input type="submit">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<title>ascii</title>
+	</head>
+	<body>
+		<h1>ASCII</h1>
+		<form method="post">
+			<label>
+				<div>title</div>
+				<input type="text" name="title" value={{title}}>
+			</label>
+			<label>
+				<div>art</div>
+				<textarea name="art" value={{art}}>{{art}}</textarea>
+			</label>
+			<div class="error">{{error}}</div>
+			<input type="submit">
+		</form>
+		<!---<script>
+		// Initialize and add the map
+		function initMap() {
+		  // The location of Uluru
+		var uluru = {lat: -25.344, lng: 131.036};
+		// The map, centered at Uluru
+		var map = new google.maps.Map(document.getElementById('map'), {zoom: 4, center: uluru});
+		// The marker, positioned at Uluru
+		var marker = new google.maps.Marker({position: uluru, map: map});
+		}
+		</script>
+		<script async defer
+	    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+	    </script>
+	    {% for data in locations %}
+	    	<div class="lat">{{data.lat}}</div>
+	    	<div class="long">{{data.lng}}</div>
+	    {% endfor %}
+		!--->
+
+		{% if img_url %}
+			<img src="{{img_url}}">
+		{% endif %}
+		<hr>
+		{% for art in arts %}	
+			<div class="art" >
+				<div class="art-title">{{art.title}}</div>
+				<pre class="art-art">{{art.art}}</pre>
+			</div>
+		{% endfor %}
+	</body>
+</html>

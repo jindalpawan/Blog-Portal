@@ -1,0 +1,21 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<title>Myblog</title>
+		<link rel="stylesheet" href="/static/css/cc.css">
+	</head>
+	<body>
+		<h1>WELCOME TO MYBLOG.COM</h1>
+		<h2>
+			<a href="/newblog">To post new Blog</a>
+		</h2>
+		{% for blog in blogs %}	
+			<div class="blog" >
+				<div class="blog-title"><b>{{blog.title}}</b></div>
+				<hr>	
+				<pre class="blog-bg">{{blog.bg}}</pre>
+				<hr><hr><br><br>
+			</div>
+		{% endfor %}
+	</body>
+</html>
